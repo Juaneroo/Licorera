@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LabelCodigo = new System.Windows.Forms.Label();
             this.textBoxCod = new System.Windows.Forms.TextBox();
             this.LabelValor = new System.Windows.Forms.Label();
@@ -37,100 +38,180 @@
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Listadedatos = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.btnVender = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Listadedatos)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelCodigo
             // 
             this.LabelCodigo.AutoSize = true;
-            this.LabelCodigo.Location = new System.Drawing.Point(51, 256);
+            this.LabelCodigo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelCodigo.Location = new System.Drawing.Point(12, 239);
             this.LabelCodigo.Name = "LabelCodigo";
-            this.LabelCodigo.Size = new System.Drawing.Size(65, 20);
+            this.LabelCodigo.Size = new System.Drawing.Size(78, 20);
             this.LabelCodigo.TabIndex = 0;
             this.LabelCodigo.Text = "Codigo: ";
             // 
             // textBoxCod
             // 
-            this.textBoxCod.Location = new System.Drawing.Point(51, 291);
+            this.textBoxCod.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCod.Location = new System.Drawing.Point(12, 279);
             this.textBoxCod.Name = "textBoxCod";
-            this.textBoxCod.Size = new System.Drawing.Size(125, 27);
+            this.textBoxCod.Size = new System.Drawing.Size(65, 27);
             this.textBoxCod.TabIndex = 1;
             // 
             // LabelValor
             // 
             this.LabelValor.AutoSize = true;
-            this.LabelValor.Location = new System.Drawing.Point(218, 256);
+            this.LabelValor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelValor.Location = new System.Drawing.Point(110, 239);
             this.LabelValor.Name = "LabelValor";
-            this.LabelValor.Size = new System.Drawing.Size(50, 20);
+            this.LabelValor.Size = new System.Drawing.Size(62, 20);
             this.LabelValor.TabIndex = 2;
             this.LabelValor.Text = "Valor: ";
             // 
             // textBoxValor
             // 
-            this.textBoxValor.Location = new System.Drawing.Point(218, 291);
+            this.textBoxValor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxValor.Location = new System.Drawing.Point(110, 279);
             this.textBoxValor.Name = "textBoxValor";
-            this.textBoxValor.Size = new System.Drawing.Size(125, 27);
+            this.textBoxValor.Size = new System.Drawing.Size(108, 27);
             this.textBoxValor.TabIndex = 3;
             // 
             // LabelProducto
             // 
             this.LabelProducto.AutoSize = true;
-            this.LabelProducto.Location = new System.Drawing.Point(411, 256);
+            this.LabelProducto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelProducto.Location = new System.Drawing.Point(244, 239);
             this.LabelProducto.Name = "LabelProducto";
-            this.LabelProducto.Size = new System.Drawing.Size(76, 20);
+            this.LabelProducto.Size = new System.Drawing.Size(93, 20);
             this.LabelProducto.TabIndex = 4;
             this.LabelProducto.Text = "Producto: ";
             // 
             // textBoxProd
             // 
-            this.textBoxProd.Location = new System.Drawing.Point(411, 291);
+            this.textBoxProd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxProd.Location = new System.Drawing.Point(244, 279);
             this.textBoxProd.Name = "textBoxProd";
-            this.textBoxProd.Size = new System.Drawing.Size(215, 27);
+            this.textBoxProd.Size = new System.Drawing.Size(147, 27);
             this.textBoxProd.TabIndex = 5;
             // 
             // LabelDescripcion
             // 
             this.LabelDescripcion.AutoSize = true;
-            this.LabelDescripcion.Location = new System.Drawing.Point(648, 256);
+            this.LabelDescripcion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelDescripcion.Location = new System.Drawing.Point(409, 239);
             this.LabelDescripcion.Name = "LabelDescripcion";
-            this.LabelDescripcion.Size = new System.Drawing.Size(94, 20);
+            this.LabelDescripcion.Size = new System.Drawing.Size(118, 20);
             this.LabelDescripcion.TabIndex = 6;
             this.LabelDescripcion.Text = "Descripcion: ";
             // 
             // textBoxDescripcion
             // 
-            this.textBoxDescripcion.Location = new System.Drawing.Point(648, 291);
+            this.textBoxDescripcion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDescripcion.Location = new System.Drawing.Point(409, 279);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(233, 27);
+            this.textBoxDescripcion.Size = new System.Drawing.Size(164, 27);
             this.textBoxDescripcion.TabIndex = 7;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(372, 345);
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGuardar.ForeColor = System.Drawing.Color.Blue;
+            this.btnGuardar.Location = new System.Drawing.Point(78, 349);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(94, 29);
+            this.btnGuardar.Size = new System.Drawing.Size(94, 43);
             this.btnGuardar.TabIndex = 8;
-            this.btnGuardar.Text = "Aceptar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // dataGridView1
+            // Listadedatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(271, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(300, 188);
-            this.dataGridView1.TabIndex = 9;
+            this.Listadedatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Listadedatos.Location = new System.Drawing.Point(12, 12);
+            this.Listadedatos.Name = "Listadedatos";
+            this.Listadedatos.RowHeadersWidth = 51;
+            this.Listadedatos.RowTemplate.Height = 29;
+            this.Listadedatos.Size = new System.Drawing.Size(720, 188);
+            this.Listadedatos.TabIndex = 9;
+            this.Listadedatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Listadedatos_CellDoubleClick);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.ForeColor = System.Drawing.Color.Red;
+            this.btnEliminar.Location = new System.Drawing.Point(230, 349);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(94, 43);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnUpdate.Location = new System.Drawing.Point(409, 349);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(103, 43);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCantidad.Location = new System.Drawing.Point(588, 279);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(87, 27);
+            this.txtCantidad.TabIndex = 13;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCantidad.Location = new System.Drawing.Point(588, 239);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(94, 20);
+            this.lblCantidad.TabIndex = 12;
+            this.lblCantidad.Text = "Cantidad: ";
+            // 
+            // btnVender
+            // 
+            this.btnVender.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnVender.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVender.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnVender.Location = new System.Drawing.Point(581, 349);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(94, 43);
+            this.btnVender.TabIndex = 14;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = false;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 422);
-            this.Controls.Add(this.dataGridView1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(711, 422);
+            this.Controls.Add(this.btnVender);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.Listadedatos);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBoxDescripcion);
             this.Controls.Add(this.LabelDescripcion);
@@ -141,8 +222,9 @@
             this.Controls.Add(this.textBoxCod);
             this.Controls.Add(this.LabelCodigo);
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Listadedatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,6 +241,11 @@
         private Label LabelDescripcion;
         private TextBox textBoxDescripcion;
         private Button btnGuardar;
-        private DataGridView dataGridView1;
+        private DataGridView Listadedatos;
+        private Button btnEliminar;
+        private Button btnUpdate;
+        private TextBox txtCantidad;
+        private Label lblCantidad;
+        private Button btnVender;
     }
 }

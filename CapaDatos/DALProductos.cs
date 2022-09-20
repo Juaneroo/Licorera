@@ -17,7 +17,7 @@ namespace Licorera.CapaDatos
         DataTable table = new DataTable();
 
 
-        public void CreateProduct(int codigo, float valor, string producto, string descripcion)
+        public void CreateProduct(int codigo, float valor, string producto, string descripcion, int cantidad)
         {
 
             comando.Connection = conexion.OpenConnection();
@@ -27,7 +27,7 @@ namespace Licorera.CapaDatos
             comando.Parameters.AddWithValue("@valor", valor);
             comando.Parameters.AddWithValue("@producto", producto);
             comando.Parameters.AddWithValue("@descripcion", descripcion);
-
+            comando.Parameters.AddWithValue("@cantidad", cantidad);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
@@ -42,6 +42,32 @@ namespace Licorera.CapaDatos
             conexion.CloseConnection();
             return table;
 
+        }
+        public void DeleteProduct(int codigo)
+        {
+
+            comando.Connection = conexion.OpenConnection();
+            comando.CommandText = "INV_ELIMINAR_PRODUCTO";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@codigo", codigo);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+        }
+
+        public void UpdateProduct(int codigo, float valor, string producto, string descripcion, int cantidad)
+        {
+
+            comando.Connection = conexion.OpenConnection();
+            comando.CommandText = "INV_ACTUALIZAR_PRODUCTO";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@codigo", codigo);
+            comando.Parameters.AddWithValue("@valor", valor);
+            comando.Parameters.AddWithValue("@producto", producto);
+            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@cantidad", cantidad);
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
         }
     }
 }

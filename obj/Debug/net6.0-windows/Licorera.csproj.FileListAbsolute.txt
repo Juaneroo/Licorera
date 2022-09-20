@@ -22,3 +22,4 @@ C:\Users\JUAN\Desktop\Herramientas\Licorera\Licorera\Licorera\obj\Debug\net6.0-w
 C:\Users\JUAN\Desktop\Herramientas\Licorera\Licorera\Licorera\obj\Debug\net6.0-windows\Licorera.pdb
 C:\Users\JUAN\Desktop\Herramientas\Licorera\Licorera\Licorera\obj\Debug\net6.0-windows\Licorera.genruntimeconfig.cache
 C:\Users\JUAN\Desktop\Herramientas\Licorera\Licorera\Licorera\obj\Debug\net6.0-windows\ref\Licorera.dll
+C:\Users\JUAN\Desktop\Herramientas\Licorera\Licorera\Licorera\obj\Debug\net6.0-windows\Licorera.Properties.Resources.resources

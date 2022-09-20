@@ -14,10 +14,10 @@ namespace Licorera.CapaNegocio
 
         private DALProductos objetoCD = new DALProductos();
 
-        public void Create(int codigo, float valor, string producto, string descripcion)
+        public void Create(int codigo, float valor, string producto, string descripcion, int cantidad)
         {
 
-            objetoCD.CreateProduct(codigo, valor, producto, descripcion);
+            objetoCD.CreateProduct(codigo, valor, producto, descripcion, cantidad);
         }
 
         public DataTable View()
@@ -28,7 +28,18 @@ namespace Licorera.CapaNegocio
 
         }
 
-        
+        public void Delete(int codigo)
+        {
+
+            objetoCD.DeleteProduct(codigo);
+        }
+
+        public void Update(int codigo, float valor, string producto, string descripcion, int cantidad)
+        {
+
+            objetoCD.UpdateProduct(codigo, valor, producto, descripcion, cantidad);
+        }
+
 
     }
 }
