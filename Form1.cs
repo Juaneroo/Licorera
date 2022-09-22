@@ -27,6 +27,9 @@ namespace Licorera
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (camposVacios())
+                return;
+
             objetoCN.Create(int.Parse(textBoxCod.Text), float.Parse(textBoxValor.Text), textBoxProd.Text, textBoxDescripcion.Text, int.Parse(txtCantidad.Text));
             MessageBox.Show("Producto guardado y archivo actualizado con éxito");
             VerListaProductos();
@@ -46,6 +49,9 @@ namespace Licorera
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (camposVacios())
+                return;
+
             objetoCN.Delete(int.Parse(textBoxCod.Text));
             MessageBox.Show("Producto eliminado con éxito");
             VerListaProductos();
@@ -58,6 +64,9 @@ namespace Licorera
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (camposVacios())
+                return;
+
             objetoCN.Update(int.Parse(textBoxCod.Text), float.Parse(textBoxValor.Text), textBoxProd.Text, textBoxDescripcion.Text, int.Parse(txtCantidad.Text));
             MessageBox.Show("Se actualizo correctamente el producto");
             VerListaProductos();
@@ -123,6 +132,16 @@ namespace Licorera
             textBoxProd.Text = Listadedatos.SelectedRows[0].Cells[2].Value.ToString();
             textBoxDescripcion.Text = Listadedatos.SelectedRows[0].Cells[3].Value.ToString();
 
+        }
+
+        private bool camposVacios()
+        {
+            if (String.IsNullOrEmpty(txtCantidad.Text) || (String.IsNullOrEmpty(textBoxCod.Text)) || (String.IsNullOrEmpty(textBoxValor.Text)) ||
+                (String.IsNullOrEmpty(textBoxProd.Text)) || (String.IsNullOrEmpty(textBoxDescripcion.Text)))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
